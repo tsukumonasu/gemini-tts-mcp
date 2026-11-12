@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+.DS_Store
+# 生成音声のデフォルト出力先（誤コミット防止）
+gemini-tts/
+*.wav

@@ -1,0 +1,27 @@
+[project]
+name = "gemini-tts-mcp"
+version = "0.1.0"
+description = "Text-to-speech MCP server (stdio) — describe the voice you want and turn text into speech with Gemini 3.8 Flash TTS (voice design) via the Gemini interactions API using browser OAuth"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "tsukumonasu" }]
+keywords = ["mcp", "gemini", "tts", "text-to-speech", "voice-design", "oauth"]
+dependencies = [
+    "mcp>=2.0.0,<3",
+    "httpx>=0.27.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/tsukumonasu/gemini-tts-mcp"
+Repository = "https://github.com/tsukumonasu/gemini-tts-mcp"
+
+[project.scripts]
+gemini-tts-mcp = "gemini_tts_mcp:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gemini_tts_mcp"]
